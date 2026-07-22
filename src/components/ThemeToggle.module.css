@@ -1,0 +1,30 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    border: var(--border-width) solid var(--color-border);
+    background: var(--color-bg-elevated);
+    color: var(--color-gold);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+        box-shadow var(--duration-fast) var(--ease-standard),
+        transform var(--duration-fast) var(--ease-standard);
+}
+
+.toggle:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-gold-sm);
+    transform: translateY(-1px);
+}
+
+.toggle:active {
+    transform: translateY(0);
+}
+
+.iconWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

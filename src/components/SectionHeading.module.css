@@ -1,0 +1,24 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2xs);
+    margin-bottom: var(--space-xl);
+}
+
+.center {
+    align-items: center;
+    text-align: center;
+}
+
+.kicker {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.title {
+    font-size: var(--fs-3xl);
+}

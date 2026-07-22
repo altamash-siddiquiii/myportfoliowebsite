@@ -1,0 +1,173 @@
+.page {
+    min-height: 100vh;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-3xl);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-2xs);
+    margin-bottom: var(--space-xl);
+}
+
+.kicker {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.title {
+    font-size: var(--fs-3xl);
+}
+
+.subtitle {
+    font-size: var(--fs-md);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-2xs);
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-full);
+    background: var(--gradient-gold);
+    color: #17140f;
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-sm);
+    transition: box-shadow var(--duration-base) var(--ease-standard),
+        transform var(--duration-fast) var(--ease-standard);
+}
+
+.downloadBtn:hover {
+    box-shadow: var(--shadow-gold-md);
+    transform: translateY(-2px);
+}
+
+.openBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-full);
+    border: var(--border-width) solid var(--color-border-strong);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-sm);
+    color: var(--color-text-primary);
+    transition: box-shadow var(--duration-base) var(--ease-standard),
+        transform var(--duration-fast) var(--ease-standard);
+}
+
+.openBtn:hover {
+    box-shadow: var(--shadow-gold-sm);
+    transform: translateY(-2px);
+}
+
+.previewWrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.iframe {
+    width: 100%;
+    height: 85vh;
+    min-height: 500px;
+    border-radius: var(--radius-md);
+    border: var(--border-width) solid var(--color-border);
+    background: var(--color-bg-elevated);
+    /* Hides the <iframe> element's own scrollbar. Note: the PDF preview
+       itself renders in the browser's native PDF viewer inside the
+       iframe — a separate context the parent page's CSS can't reach —
+       so that inner viewer's scrollbar/toolbar stays under the
+       browser's control and can't be removed from here. */
+    scrollbar-width: none;
+}
+
+.iframe::-webkit-scrollbar {
+    display: none;
+}
+
+.fallbackText {
+    padding: var(--space-lg);
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+}
+
+.fallbackText a {
+    color: var(--color-gold);
+    font-weight: var(--fw-semibold);
+}
+
+.previewError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    height: 300px;
+    border-radius: var(--radius-md);
+    border: var(--border-width) dashed var(--color-border-strong);
+    background: var(--color-bg-elevated);
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.errorIcon {
+    color: var(--color-gold);
+}
+
+.errorText {
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+    max-width: 42ch;
+}
+
+.mobileNotice {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+/* ===================================================================
+   BREAKPOINTS
+   =================================================================== */
+@media (max-width: 768px) {
+    .title {
+        font-size: var(--fs-2xl);
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .downloadBtn,
+    .openBtn {
+        justify-content: center;
+    }
+
+    .iframe {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .actions {
+        gap: var(--space-xs);
+    }
+}

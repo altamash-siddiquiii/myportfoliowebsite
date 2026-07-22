@@ -1,0 +1,121 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.entry {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: var(--space-lg);
+}
+
+.markerCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2xs);
+}
+
+.marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: var(--radius-full);
+    border: var(--border-width) solid var(--color-border-strong);
+    background: var(--color-bg-elevated);
+    color: var(--color-gold);
+}
+
+.markerLine {
+    flex: 1;
+    width: 1px;
+    min-height: 24px;
+    background: var(--color-border);
+}
+
+.entry:last-child .markerLine {
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-lg);
+}
+
+.headerRow {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+}
+
+.role {
+    font-size: var(--fs-lg);
+    color: var(--color-text-primary);
+}
+
+.period {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-gold);
+    white-space: nowrap;
+}
+
+.description {
+    font-size: var(--fs-sm);
+    line-height: var(--lh-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 68ch;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+}
+
+.highlightItem {
+    position: relative;
+    padding-left: var(--space-sm);
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+}
+
+.highlightItem::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-gold);
+}
+
+/* ===================================================================
+   BREAKPOINTS
+   =================================================================== */
+@media (max-width: 768px) {
+    .entry {
+        grid-template-columns: 36px 1fr;
+        gap: var(--space-sm);
+    }
+
+    .marker {
+        width: 32px;
+        height: 32px;
+    }
+
+    .headerRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3xs);
+    }
+}

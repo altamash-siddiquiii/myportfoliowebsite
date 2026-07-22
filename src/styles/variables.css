@@ -1,0 +1,143 @@
+:root {
+    /* ===================================================================
+     COLOR SYSTEM — DARK THEME (default)
+     =================================================================== */
+    --color-bg: #0a0908;
+    --color-bg-elevated: #131110;
+    --color-bg-elevated-2: #1c1917;
+    --color-surface: #17140f;
+    --color-border: rgba(212, 175, 110, 0.16);
+    --color-border-strong: rgba(212, 175, 110, 0.32);
+
+    --color-text-primary: #f5f1e8;
+    --color-text-secondary: #b8b0a0;
+    --color-text-muted: #7a7266;
+
+    --color-gold: #d4af6e;
+    --color-gold-bright: #f3d999;
+    --color-gold-dim: #a3814f;
+    --color-gold-rgb: 212, 175, 110;
+
+    --gradient-gold: linear-gradient(100deg,
+            var(--color-gold-dim) 0%,
+            var(--color-gold) 25%,
+            var(--color-gold-bright) 50%,
+            var(--color-gold) 75%,
+            var(--color-gold-dim) 100%);
+
+    --shadow-gold-sm: 0 2px 12px rgba(var(--color-gold-rgb), 0.12);
+    --shadow-gold-md: 0 8px 24px rgba(var(--color-gold-rgb), 0.18);
+    --shadow-gold-lg: 0 16px 48px rgba(var(--color-gold-rgb), 0.22);
+    --shadow-elevation: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+    /* ===================================================================
+     TYPOGRAPHY
+     =================================================================== */
+    --font-display: "Playfair Display", "Georgia", serif;
+    --font-body: "Manrope", "Inter", -apple-system, sans-serif;
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.375rem;
+    --fs-xl: 1.75rem;
+    --fs-2xl: 2.25rem;
+    --fs-3xl: 3rem;
+    --fs-4xl: 3.75rem;
+    --fs-5xl: 4.75rem;
+
+    --lh-tight: 1.15;
+    --lh-snug: 1.35;
+    --lh-normal: 1.6;
+    --lh-relaxed: 1.75;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ===================================================================
+     SPACING SCALE — use these exclusively, no raw px values
+     =================================================================== */
+    --space-3xs: 0.25rem;
+    /* 4px */
+    --space-2xs: 0.5rem;
+    /* 8px */
+    --space-xs: 0.75rem;
+    /* 12px */
+    --space-sm: 1rem;
+    /* 16px */
+    --space-md: 1.5rem;
+    /* 24px */
+    --space-lg: 2rem;
+    /* 32px */
+    --space-xl: 3rem;
+    /* 48px */
+    --space-2xl: 4.5rem;
+    /* 72px */
+    --space-3xl: 6rem;
+    /* 96px */
+    --space-4xl: 8rem;
+    /* 128px */
+
+    /* ===================================================================
+     LAYOUT
+     =================================================================== */
+    --container-max: 1200px;
+    --container-padding: 1.5rem;
+    --section-padding-y: var(--space-3xl);
+
+    /* ===================================================================
+     RADII / BORDERS
+     =================================================================== */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 999px;
+    --border-width: 1px;
+
+    /* ===================================================================
+     TRANSITIONS
+     =================================================================== */
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-fast: 0.2s;
+    --duration-base: 0.35s;
+    --duration-slow: 0.6s;
+
+    /* ===================================================================
+     Z-INDEX SCALE
+     =================================================================== */
+    --z-base: 1;
+    --z-elevated: 10;
+    --z-sticky: 100;
+    --z-overlay: 500;
+    --z-modal: 900;
+    --z-toast: 1000;
+}
+
+/* =====================================================================
+   COLOR SYSTEM — LIGHT THEME
+   Swapped via [data-theme="light"] on <html> or <body>
+   Gold accent values stay consistent; only surfaces/text invert.
+   ===================================================================== */
+[data-theme="light"] {
+    --color-bg: #faf7f0;
+    --color-bg-elevated: #ffffff;
+    --color-bg-elevated-2: #f3ede0;
+    --color-surface: #ffffff;
+    --color-border: rgba(163, 129, 79, 0.2);
+    --color-border-strong: rgba(163, 129, 79, 0.38);
+
+    --color-text-primary: #1f1b14;
+    --color-text-secondary: #4a4436;
+    --color-text-muted: #8a8272;
+
+    --color-gold: #a3814f;
+    --color-gold-bright: #c99c5e;
+    --color-gold-dim: #7d6339;
+    --color-gold-rgb: 163, 129, 79;
+
+    --shadow-elevation: 0 4px 16px rgba(31, 27, 20, 0.08);
+}

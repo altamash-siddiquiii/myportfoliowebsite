@@ -1,0 +1,70 @@
+.wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: var(--z-base);
+    background: var(--color-bg);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    will-change: transform;
+}
+
+[data-theme="light"] .blob {
+    opacity: 0.22;
+}
+
+.blobOne {
+    width: 480px;
+    height: 480px;
+    top: -10%;
+    left: 5%;
+    background: radial-gradient(circle, var(--color-gold) 0%, transparent 70%);
+}
+
+.blobTwo {
+    width: 560px;
+    height: 560px;
+    bottom: -15%;
+    right: 0%;
+    background: radial-gradient(circle,
+            var(--color-gold-bright) 0%,
+            transparent 70%);
+}
+
+.blobThree {
+    width: 380px;
+    height: 380px;
+    top: 30%;
+    left: 40%;
+    background: radial-gradient(circle, var(--color-gold-dim) 0%, transparent 70%);
+}
+
+/* Subtle grain/vignette overlay for a "cinematic" finish */
+.grain {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center,
+            transparent 40%,
+            var(--color-bg) 100%);
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blob {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blobOne,
+    .blobTwo,
+    .blobThree {
+        filter: blur(60px);
+    }
+}

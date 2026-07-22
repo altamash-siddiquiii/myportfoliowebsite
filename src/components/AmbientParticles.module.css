@@ -1,0 +1,52 @@
+/* Negative z-index so it paints behind ordinary (non-positioned) page
+   content instead of on top of it — position:fixed + a positive
+   z-index would otherwise stack above static section content. */
+.wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--color-gold);
+    opacity: 0.28;
+    filter: blur(0.5px);
+    will-change: transform, opacity;
+    animation-name: drift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+[data-theme="light"] .dot {
+    opacity: 0.18;
+}
+
+@keyframes drift {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: translate(18px, -26px);
+        opacity: 0.4;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dot {
+        animation: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        display: none;
+    }
+}

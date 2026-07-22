@@ -1,0 +1,73 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.otherBlock {
+    margin-top: var(--space-2xl);
+}
+
+.otherHeading {
+    font-size: var(--fs-md);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+}
+
+.otherList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.otherItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-2xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: var(--border-width) solid var(--color-border);
+    background: var(--color-bg-elevated);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+        box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.otherItem:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-gold-sm);
+}
+
+.otherTitle {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-primary);
+}
+
+.otherTech {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+.otherIcon {
+    color: var(--color-gold);
+    flex-shrink: 0;
+}
+
+/* ===================================================================
+   BREAKPOINTS
+   =================================================================== */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .otherList {
+        grid-template-columns: 1fr;
+    }
+
+}
