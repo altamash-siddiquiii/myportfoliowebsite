@@ -17,8 +17,10 @@ const isTouchDevice =
 const roles = [
   siteConfig.title,
   `${siteConfig.subtitle} Developer`,
-  "REST API Builder",
-  "Problem Solver",
+  "Frontend Developer",
+  "Backend Developer",
+  "React.js Developer",
+  "Node.js Developer",
 ].filter(Boolean);
 
 export default function Hero() {
