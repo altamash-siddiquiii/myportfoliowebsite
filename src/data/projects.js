@@ -52,8 +52,8 @@ export const projects = [
         summary:
             "A full-stack rental listing platform with listing management, file uploads, map display, reviews, and secure authentication.",
         tech: ["Node.js", "Express.js", "MongoDB", "EJS", "Passport.js"],
-        githubUrl: "[REPLACE_ME]",
-        liveUrl: "[REPLACE_ME]",
+        githubUrl: "https://github.com/altamash-siddiquiii/P1_WanderLust",
+        liveUrl: "https://altamashproject1.onrender.com",
         featured: true,
         overview:
             "ExploreBnB is a full-stack rental listing platform inspired by Airbnb, built to practice end-to-end MVC architecture. Users can browse listings, view them on an interactive map, leave reviews, and manage their own listings through a secure authenticated dashboard.",
@@ -87,8 +87,8 @@ export const projects = [
         summary:
             "A full-stack MERN stock management app with buy/sell functionality, JWT auth, and email OTP verification.",
         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT"],
-        githubUrl: "[REPLACE_ME]",
-        liveUrl: "[REPLACE_ME]",
+        githubUrl: "https://github.com/altamash-siddiquiii/Zerodha-Clone",
+        liveUrl: "https://zerodha-landing-p2.onrender.com",
         featured: true,
         overview:
             "A MERN-stack stock management application inspired by Zerodha, allowing users to simulate buying and selling stocks through a responsive React frontend backed by secure REST APIs, with JWT-based authentication and email OTP verification for account security.",
@@ -120,8 +120,8 @@ export const projects = [
         summary:
             "A freelance automation tool with token-based admin authentication, bulk messaging, and live status monitoring.",
         tech: ["Node.js", "Express.js", "MongoDB", "EJS"],
-        githubUrl: "[REPLACE_ME]",
-        liveUrl: "[REPLACE_ME]",
+        githubUrl: "#Code_On_BotHosting",
+        liveUrl: "http://fi2.bot-hosting.net:20025/",
         featured: true,
         overview:
             "FB Panel is a freelance automation and management tool built for a client, featuring a secure admin dashboard protected by token verification and key-based approval, with bulk automation actions and live monitoring of account status.",
@@ -154,8 +154,8 @@ export const projects = [
         summary:
             "A responsive React.js portfolio for a freelance mehndi artist client, featuring a work gallery and appointment booking interface.",
         tech: ["React.js"],
-        githubUrl: "[REPLACE_ME]",
-        liveUrl: "[REPLACE_ME]",
+        githubUrl: "https://github.com/altamash-siddiquiii/Zehra-Mehndi-Artist",
+        liveUrl: "https://zehramehndiartist.onrender.com",
         featured: true,
         overview:
             "A responsive portfolio website built for a freelance mehndi artist client, showcasing a work gallery and giving prospective customers a simple interface to request appointment bookings.",
@@ -181,11 +181,11 @@ export const otherProjects = [
     {
         title: "Todo List Application",
         tech: ["React.js", "JavaScript"],
-        githubUrl: "[REPLACE_ME]",
+        githubUrl: "#No_Link",
     },
     {
         title: "Weather Application",
-        tech: ["JavaScript", "REST API"],
-        githubUrl: "[REPLACE_ME]",
+        tech: ["React.js", "REST API"],
+        githubUrl: "#No_Link",
     },
 ];
